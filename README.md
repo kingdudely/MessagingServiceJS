@@ -5,6 +5,6 @@ npm install kingdudely/MessagingServiceJS
 ```
 
 # How to use
-[Check examples blud chud](./examples)
+[Check examples blud](./examples) <!-- chud? -->
 
 [Or check the source code](./lib)
