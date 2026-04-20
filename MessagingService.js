@@ -29,16 +29,18 @@ export default class MessagingService {
 	#Socket;
 
 	#SendRequest(target, args) {
+		const invocationId = String(this.#InvocationId++);
+
 		this.#Socket.send(SignalR.EncodeMessages([
 			{
 				type: 1,
 				target,
 				arguments: args,
-				invocationId: String(this.#InvocationId++),
+				invocationId,
 			}
 		]));
 
-		return new Promise(resolve => this.#Pending.set(id, resolve));
+		return new Promise(resolve => this.#Pending.set(invocationId, resolve));
 	};
 
 	constructor(robloSecurity, universeId) {
