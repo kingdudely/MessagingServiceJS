@@ -14,13 +14,12 @@
 	"license": "MIT",
 	"author": "kingdudely",
 	"type": "module",
-	"main": "./lib/index.js",
-	"exports": "./lib/index.js",
+	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
-		"ws": "^8.20.0"
+		"@microsoft/signalr": "^10.0.0"
 	},
 	"devDependencies": {}
 }
