@@ -6,7 +6,7 @@ const MessagingService = await MessagingServiceFactory.InitializeAsync(
 );
 
 await MessagingService.SubscribeAsync("chat", (message) => {
-	console.log("Received:", message.Data);
+	console.log("Received:", message);
 });
 
 await MessagingService.PublishAsync("chat", "Hello!");
