@@ -5,8 +5,8 @@ const MessagingService = await MessagingServiceFactory.InitializeAsync(
 	69_420_1337_80085 // Universe ID
 );
 
-MessagingService.SubscribeAsync("chat", (message) => {
+await MessagingService.SubscribeAsync("chat", (message) => {
 	console.log("Received:", message.Data);
 });
 
-MessagingService.PublishAsync("chat", "Hello!");
+await MessagingService.PublishAsync("chat", "Hello!");
