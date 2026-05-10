@@ -1,6 +1,6 @@
 {
 	"name": "messagingservicejs",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "MessagingService implemented in NodeJS! (Sorry, couldn't get it working in the browser)",
 	"keywords": [],
 	"homepage": "https://github.com/kingdudely/MessagingServiceJS#readme",
