@@ -5,16 +5,10 @@ const MessagingService = await MessagingServiceFactory.InitializeAsync(
 	69_420_1337_80085 // Universe ID
 );
 
-await MessagingService.SubscribeAsync("chat", (message) => {
+function onChat(message) {
 	console.log("Received:", message);
-});
+}
 
+await MessagingService.SubscribeAsync("chat", onChat);
 await MessagingService.PublishAsync("chat", "Hello!");
-
-// How to publish to Roblox:
-await MessagingService.PublishAsync("chat", {
-	Sent: Date.now() / 1000, // Number, required
-	Data: "Hello!", // Variant, required
-	// TraceId: Math.random() * 10000000000000000000, // Number, optional
-	// TracingEnabled: false // Number, optional
-});
+await MessagingService.UnsubscribeAsync("chat", onChat);
