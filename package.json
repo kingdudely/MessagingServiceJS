@@ -1,6 +1,6 @@
 {
 	"name": "messagingservicejs",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "MessagingService implemented in NodeJS! (Sorry, couldn't get it working in the browser)",
 	"keywords": [],
 	"homepage": "https://github.com/kingdudely/MessagingServiceJS#readme",
@@ -21,6 +21,6 @@
 	},
 	"dependencies": {
 		"@microsoft/signalr": "^10.0.0",
-		"json-bigint": "^1.0.0"
+		"zod": "^4.4.3"
 	}
 }
